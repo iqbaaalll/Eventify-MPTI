@@ -32,8 +32,8 @@
         <div class=" w-full  h-full rounded-3xl flex flex-col p-8">
             <form class="flex flex-col gap-16" action="/" method="POST">
                 @csrf
-        
-                <div>      
+
+                <div>
                     <h3 class="text-3xl font-extrabold">Nama Event</h3>
                     <div class="relative z-0 border-b-2 border-black mt-2">
                         <input type="text" id="floating_standard"
@@ -126,37 +126,10 @@
 
                             <div class="flex flex-col gap-4">
                                 <h3 class="text-3xl font-extrabold">Lokasi</h3>
-
-                                <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                                    class="bg-transparent border-2 lg:w-1/2 justify-between border-black text-black  focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
-                                    type="button">Pilih lokasi<svg class="ml-2 w-4 h-4" aria-hidden="true"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg></button>
-                                <!-- Dropdown menu -->
-                                <div id="dropdown"
-                                    class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow-lg">
-                                    <ul class="py-1 text-sm px-6 text-gray-700 " aria-labelledby="dropdownDefault">
-                                        <li>
-                                            <a href="#"
-                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                                out</a>
-                                        </li>
-                                    </ul>
+                                <div class="h-full">
+                                    <input type="number" id="lokasi"
+                                        class="bg-transparent border-2 w-full lg:w-1/2 justify-between border-black text-black  focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-4 py-2.5 inline-flex items-center "
+                                        placeholder="Pilih lokasi">
                                 </div>
                             </div>
                             <div class="flex flex-col gap-4">

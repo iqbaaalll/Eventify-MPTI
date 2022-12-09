@@ -32,6 +32,9 @@ Route::get('/jenisEvent', function () {
 Route::get('/eventPrivate', function () {
     return view('eventPrivate');
 });
+Route::get('/kategori', function () {
+    return view('kategori');
+});
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);

@@ -17,7 +17,7 @@
             font-family: 'Poppins', sans-serif;
         }
     </style>
-    <title>HOME</title>
+    <title>Eventify</title>
 </head>
 
 <body>
@@ -102,7 +102,7 @@
                         <img class="rounded-t-lg w-full" src="./img/event1.png " alt="" />
                     </a>
                     <div class="py-4">
-                        <a href="#">
+                        <a href="/event">
                             <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900">Festival Teater</h5>
                         </a>
                         <div class="flex flex-row w-full justify-between">
@@ -119,11 +119,11 @@
                     </div>
                 </div>
                 <div class=" bg-white border border-transparent hover:border-gray-300 transition-all rounded-lg  ">
-                    <a href="#">
+                    <a href="/event">
                         <img class="rounded-t-lg w-full" src="./img/event2.png " alt="" />
                     </a>
                     <div class="py-4">
-                        <a href="#">
+                        <a href="/event">
                             <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900">Jazz Festival</h5>
                         </a>
                         <div class="flex flex-row w-full justify-between">
@@ -163,7 +163,7 @@
                     <p class="font-bold text-lg lg:text-xl">BURUAN KLIK TOMBOLNYA</p>
                     <p class="text-lg lg:text-xl">*Syarat & ketentuan berlaku</p>
                 </div>
-                <a href="">
+                <a href="/jenisEvent">
                     <button
                         class="px-6 py-3 w-full lg:w-fit bg-black text-white rounded-lg border-2 border-black hover:bg-transparent transition-all hover:text-black">
                         BUAT EVENT

@@ -39,13 +39,13 @@
                     <a href="">
                         <button
                             class="bg-black w-full px-6 py-3 text-3xl border-yellow-500 border-2 text-white rounded-xl hover:bg-transparent hover:text-black hover:border-black transition-all">
-                            Public
+                            Private
                         </button>
                     </a>
                     <a href="/eventPrivate">
                         <button
                             class="bg-black w-full px-6 py-3 text-3xl border-yellow-500 border-2 text-white rounded-xl hover:bg-transparent hover:text-black hover:border-black transition-all">
-                            Private
+                            Public
                         </button>
                     </a>
                 </div>
