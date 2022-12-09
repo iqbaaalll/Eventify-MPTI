@@ -32,7 +32,7 @@
                 <h1 class="font-bold text-2xl lg:text-3xl">Create your Free Account</h1>
                 <div class="w-full h-auto flex flex-col gap-4">
 
-                    <form class="w-full h-fit flex flex-col items-center gap-4" action="" method="post">
+                    <form class="w-full h-fit flex flex-col items-center gap-4" action="/register" method="POST">
                         @csrf
                         <div class="flex flex-col w-full">
                             <label class="text-black/50 font-bold" for="name">Full Name</label>

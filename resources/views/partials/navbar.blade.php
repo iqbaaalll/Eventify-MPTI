@@ -37,12 +37,17 @@
                         EVENT</a>
                 </li>
                 <li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="{{auth()->user() ?  "block"  :"hidden" }} py-2 pl-3 pr-4 text-white bg-red-500 border-2 hover:text-red-500 border-red-500 rounded  hover:bg-transparent transition-all   " type="submit">LOGOUT</button>
+                    </form>
+                <li>
                     <a href="/login"
-                        class="block py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">LOGIN</a>
+                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">LOGIN</a>
                 </li>
                 <li>
                     <a href="/register"
-                        class="block py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">REGISTER</a>
+                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">REGISTER</a>
                 </li>
             </ul>
         </div>

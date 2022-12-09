@@ -30,10 +30,10 @@
 
     <div class="w-full h-screen px-4 lg:px-32 pt-32 pb-16">
         <div class=" w-full  h-full rounded-3xl flex flex-col p-8">
-            <form class="flex flex-col gap-16" action="">
+            <form class="flex flex-col gap-16" action="/" method="POST">
                 @csrf
-
-                <div>
+        
+                <div>      
                     <h3 class="text-3xl font-extrabold">Nama Event</h3>
                     <div class="relative z-0 border-b-2 border-black mt-2">
                         <input type="text" id="floating_standard"
