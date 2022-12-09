@@ -32,11 +32,11 @@
         <div class=" w-full  h-full rounded-3xl flex flex-col p-8">
             <form class="flex flex-col gap-16" action="/" method="POST">
                 @csrf
-        
-                <div>      
+
+                <div>
                     <h3 class="text-3xl font-extrabold">Nama Event</h3>
                     <div class="relative z-0 border-b-2 border-black mt-2">
-                        <input type="text" id="floating_standard"
+                        <input type="text" id="floating_standard" name="nama"
                             class="block py-2.5 border-0   px-0 w-full text-sm text-gray-900 bg-transparent   appearance-none  focus:outline-none focus:ring-0   peer"
                             placeholder=" " />
                         <label for="floating_standard"
@@ -58,25 +58,16 @@
                                 </svg></button>
                             <!-- Dropdown menu -->
                             <div id="dropdown"
-                                class="hidden z-10 w-full bg-white rounded divide-y divide-gray-100 shadow-lg">
-                                <ul class="py-4 text-sm px-6 text-gray-700 " aria-labelledby="dropdownDefault">
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                            out</a>
-                                    </li>
+                                class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow-lg">
+                                <ul class="py-8 text-sm px-6 flex flex-col gap-4 text-gray-700 "
+                                    aria-labelledby="dropdownDefault">
+                                    @foreach ($kategoris as $kategori)
+                                        <li class="">
+                                            <input type="radio" id={{ $kategori->id }} name="kategori"
+                                                value={{ $kategori->id }}>
+                                            <label for={{ $kategori->id }}>{{ $kategori->nama }}</label><br>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -87,14 +78,14 @@
                                 <div class="relative">
                                     <label for="tanggalMulai">Tanggal Mulai</label>
                                     <input datepicker datepicker-orientation="bottom right" name="start"
-                                        type="text" id="tanggalMulai"
+                                        type="date" id="tanggalMulai" name="tanggalMulai"
                                         class="bg-transparent border-2 w-full placeholder:italic placeholder:text-slate-400 justify-between border-black   focus:outline-none focus:ring-yellow-500 font-medium  rounded-lg text-sm px-4 py-2.5 inline-flex items-center"
                                         placeholder="Pilih tanggal">
                                 </div>
                                 <div class="relative">
                                     <label for="tanggalBerakhir">Tanggal Berakhir</label>
                                     <input datepicker datepicker-orientation="bottom right" name="end"
-                                        type="text" id="tanggalBerakhir"
+                                        type="date" id="tanggalBerakhir" name="tanggalBerakhir"
                                         class="bg-transparent border-2 w-full placeholder:italic placeholder:text-slate-400 justify-between border-black   focus:outline-none focus:ring-yellow-500 font-medium  rounded-lg text-sm px-4 py-2.5 inline-flex items-center"
                                         placeholder="Pilih tanggal">
                                 </div>
@@ -107,14 +98,14 @@
                                 <div class="timepicker relative mb-3  w-full" data-mdb-with-icon="false"
                                     id="input-toggle-timepicker">
                                     <label for="jamMulai">Jam Mulai</label>
-                                    <input type="text" id="jamMulai"
+                                    <input type="time" id="jamMulai"
                                         class="bg-transparent border-2 w-full placeholder:italic placeholder:text-slate-400 justify-between border-black   focus:outline-none focus:ring-yellow-500 font-medium  rounded-lg text-sm px-4 py-2.5 inline-flex items-center"
                                         placeholder="Pilih Waktu" data-mdb-toggle="input-toggle-timepicker">
                                 </div>
-                                <div class="timepicker relative mb-3 w-full" data-mdb-with-icon="false"
+                                <div class=" relative mb-3 w-full" data-mdb-with-icon="false"
                                     id="input-toggle-timepicker">
                                     <label for="jamBerakhir">Jam Berakhir</label>
-                                    <input type="text" id="jamBerakhir"
+                                    <input type="time" id="jamBerakhir" value=""
                                         class="bg-transparent border-2 w-full placeholder:italic placeholder:text-slate-400 justify-between border-black   focus:outline-none focus:ring-yellow-500 font-medium  rounded-lg text-sm px-4 py-2.5 inline-flex items-center"
                                         placeholder="Pilih Waktu" data-mdb-toggle="input-toggle-timepicker">
                                 </div>
