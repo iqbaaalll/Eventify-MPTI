@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/login', function ()  {
+Route::get('/login', function () {
     return view('login');
 })->middleware('guest')->name('login');
 Route::get('/register', function () {
@@ -32,11 +33,7 @@ Route::get('/jenisEvent', function () {
 Route::get('/eventPrivate', function () {
     return view('eventPrivate');
 });
-Route::get('/kategori', function () {
-    return view('kategori');
-});
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
-
