@@ -15,7 +15,10 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $kategoris = Kategori::all();
+        return view('eventPrivate', [
+            'kategoris' => $kategoris
+        ]);
     }
 
     /**

@@ -49,27 +49,21 @@
                         <div class="flex flex-col gap-4">
                             <h3 class="text-3xl font-extrabold">Kategori</h3>
 
-                            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                                class="bg-transparent border-2 lg:w-1/2 justify-between border-black text-black  focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
-                                type="button">Pilih kategori<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg></button>
+
                             <!-- Dropdown menu -->
-                            <div id="dropdown"
-                                class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow-lg">
-                                <ul class="py-8 text-sm px-6 flex flex-col gap-4 text-gray-700 "
-                                    aria-labelledby="dropdownDefault">
+                                <select id="dropdownDefault" data-dropdown-toggle="dropdown"
+                                class="bg-transparent border-2 lg:w-1/2 justify-between border-black text-black  focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-4 py-2.5 text-left inline-flex items-left "
+                                type="button"><svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                                <option disable hidden value="" selected="selected">Pilih Kategori</option>
                                     @foreach ($kategoris as $kategori)
-                                        <li class="">
-                                            <input type="radio" id={{ $kategori->id }} name="kategori"
-                                                value={{ $kategori->id }}>
-                                            <label for={{ $kategori->id }}>{{ $kategori->nama }}</label><br>
-                                        </li>
+                                    <option  value="{{ $kategori->id }}" >{{ $kategori->nama }}</option>
                                     @endforeach
-                                </ul>
-                            </div>
+                                </select>
+
+
                         </div>
                         <div class="flex flex-col gap-4">
                             <h3 class="text-3xl font-extrabold">Tanggal</h3>
