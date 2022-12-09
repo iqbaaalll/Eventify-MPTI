@@ -17,7 +17,7 @@
             font-family: 'Poppins', sans-serif;
         }
     </style>
-    <title>EVENT</title>
+    <title>{{ $title }}</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         <div class="w-full h-full lg:h-screen p-2 pt-32 lg:pt-44 md:p-8 lg:p-32">
 
             <div class="w-full h-full">
-                <img src="./img/bg_hero.png" alt="">
+                <img class="w-full h-full" src="/img/events/{{ $event->imagePath }}" alt="">
             </div>
 
         </div>
@@ -37,7 +37,7 @@
         <div class="w-full h-full flex flex-col gap-8 lg:gap-24 pt-16 p-2  lg:p-32">
             <div class="relative w-fit p-2 pr-10">
                 <span class="block absolute inset-1 -rotate-3 bg-yellow-500 shadow-md" aria-hidden="true"></span>
-                <span class="relative text-4xl lg:text-6xl text-black font-extrabold">WOKE UP FESTIVAL 2023</span>
+                <span class="relative text-4xl lg:text-6xl text-black font-extrabold">{{ $event->nama }}</span>
             </div>
             <div class="w-full h-full flex flex-col gap-8 px-4 lg:px-8">
                 <div
@@ -47,13 +47,13 @@
                             <h3 class="lg:text-5xl font-bold">
                                 TANGGAL
                             </h3>
-                            <p class="lg:text-2xl">25 Feb 2023</p>
+                            <p class="lg:text-2xl">{{ $event->tanggalMulai }}</p>
                         </div>
                         <div class="flex flex-col">
                             <h3 class="lg:text-5xl font-bold">
                                 WAKTU
                             </h3>
-                            <p class="lg:text-2xl">16:00 - 23:30 WIB</p>
+                            <p class="lg:text-2xl">{{ $event->jamMulai . ' - ' . $event->jamBerakhir . 'WIB' }}</p>
                         </div>
                     </div>
                     <div class="flex flex-col justify-between gap-8 lg:gap-24">
@@ -62,8 +62,7 @@
                                 TEMPAT
                             </h3>
                             <div class="flex flex-row h-auto gap-3 items-baseline">
-                                <p class="lg:text-2xl">Istora Senayan, GBK Sports
-                                    Complex, DKI Jakarta</p>
+                                <p class="lg:text-2xl">{{ $event->lokasi }}</p>
                                 <div class="flex flex-row gap-2 items-center">
                                     <p>></p>
                                     <p>></p>
@@ -85,12 +84,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="">
-                    <button
-                        class="w-full h-full py-3 text-2xl font-bold bg-yellow-500 border-2 rounded-lg border-black text-black hover:bg-transparent transition-all">
-                        BELI TIKET
-                    </button>
-                </a>
+                <button onclick="handleClick()"
+                    class="w-full h-full py-3 text-2xl font-bold bg-yellow-500 border-2 rounded-lg border-black text-black hover:bg-transparent transition-all">
+                    BELI TIKET
+                </button>
             </div>
         </div>
     </section>
@@ -125,6 +122,13 @@
     </section>
 
     @include('partials.footer')
+
+    <script>
+        function handleClick() {
+            alert('Anda berhasil memesan tiket')
+            window.location = "http://localhost:8000/";
+        }
+    </script>
 
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>

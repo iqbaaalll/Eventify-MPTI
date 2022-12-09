@@ -21,16 +21,14 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/event', function () {
-    return view('event');
-});
 Route::get('/jenisEvent', function () {
     return view('jenisEvent');
 });
 Route::get('/eventPrivate', [EventController::class, 'index']);
+Route::post('/event', [EventController::class, 'store']);
+
+Route::get('/', [EventController::class, 'getAll']);
+Route::get('/event/{event:id}', [EventController::class, 'showOne']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);

@@ -9,11 +9,7 @@ use App\Models\Kategori;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = [];
     public function kategori()
     {
         return $this->belongsTo(Kategori::class);
