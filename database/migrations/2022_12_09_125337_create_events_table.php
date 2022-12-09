@@ -22,7 +22,9 @@ return new class extends Migration
             $table->time('jamBerakhir', $precision = 0);
             $table->string('lokasi');
             $table->integer('budget');
+            $table->integer('kapasitas');
             $table->string('imagePath');
+            $table->timestamps();
         });
     }
 

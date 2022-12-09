@@ -22,22 +22,10 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/event', function () {
-    return view('event');
-});
 Route::get('/jenisEvent', function () {
     return view('jenisEvent');
 });
-Route::get('/eventPrivate', function () {
-    return view('eventPrivate');
-});
-Route::get('/kategori', function () {
-    return view('kategori');
-});
-Route::get('/eventPrivate', [KategoriController::class, 'index']);
+Route::get('/eventPrivate', [EventController::class, 'index']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);

@@ -1,7 +1,7 @@
 <nav class="bg-white w-full z-50 h-fit fixed border-gray-200 px-2 sm:px-32 py-4 rounded ">
     <div class=" flex flex-wrap items-center justify-between md:justify-center lg:justify-between mx-auto">
         <a href="/" class="flex items-center">
-            <img src="./img/logo.png" class="h-8 mr-3 sm:h-12" alt="Flowbite Logo" />
+            <img src="{{ URL::asset('/img/logo.png') }}" class="h-8 mr-3 sm:h-12" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
@@ -39,15 +39,15 @@
                 <li>
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="{{auth()->user() ?  "block"  :"hidden" }} py-2 pl-3 pr-4 text-white bg-red-500 border-2 hover:text-red-500 border-red-500 rounded  hover:bg-transparent transition-all   " type="submit">KELUAR</button>
+                        <button class="{{auth()->user() ?  "block"  :"hidden" }} py-2 pl-3 pr-4 text-white bg-red-500 border-2 hover:text-red-500 border-red-500 rounded  hover:bg-transparent transition-all   " type="submit">LOGOUT</button>
                     </form>
                 <li>
                     <a href="/login"
-                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">MASUK</a>
+                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">LOGIN</a>
                 </li>
                 <li>
                     <a href="/register"
-                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">DAFTAR</a>
+                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">REGISTER</a>
                 </li>
             </ul>
         </div>

@@ -102,7 +102,7 @@
                         <img class="rounded-t-lg w-full" src="./img/event1.png " alt="" />
                     </a>
                     <div class="py-4">
-                        <a href="/event">
+                        <a href="#">
                             <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900">Festival Teater</h5>
                         </a>
                         <div class="flex flex-row w-full justify-between">
@@ -119,26 +119,27 @@
                     </div>
                 </div>
                 <div class=" bg-white border border-transparent hover:border-gray-300 transition-all rounded-lg  ">
-                    <a href="/event">
+                    <a href="#">
                         <img class="rounded-t-lg w-full" src="./img/event2.png " alt="" />
                     </a>
                     <div class="py-4">
-                        <a href="/event">
+                        <a href="#">
                             <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900">Jazz Festival</h5>
                         </a>
                         <div class="flex flex-row w-full justify-between">
 
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Explore Now!</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-12 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Explore Now!</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-12 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                </svg>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endfor
 
             </div>
         </div>
