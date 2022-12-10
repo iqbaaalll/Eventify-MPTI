@@ -19,7 +19,7 @@
             <ul
                 class="flex flex-col p-4 items-center mt-4 border text-black border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white  ">
                 <li>
-                    <a href="/event"
+                    <a href="#"
                         class="block py-2 pl-3 pr-4 hover:bg-black hover:text-white transition-all rounded "
                         aria-current="page">TELUSURI</a>
                 </li>
@@ -28,7 +28,7 @@
                         class="block py-2 pl-3 pr-4 hover:bg-black hover:text-white transition-all rounded ">KATEGORI</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="/favorit"
                         class="block py-2 pl-3 pr-4 hover:bg-black hover:text-white transition-all rounded ">FAVORIT</a>
                 </li>
                 <li>
@@ -39,15 +39,17 @@
                 <li>
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="{{auth()->user() ?  "block"  :"hidden" }} py-2 pl-3 pr-4 text-white bg-red-500 border-2 hover:text-red-500 border-red-500 rounded  hover:bg-transparent transition-all   " type="submit">LOGOUT</button>
+                        <button
+                            class="{{ auth()->user() ? 'block' : 'hidden' }} py-2 pl-3 pr-4 text-white bg-red-500 border-2 hover:text-red-500 border-red-500 rounded  hover:bg-transparent transition-all   "
+                            type="submit">KELUAR</button>
                     </form>
                 <li>
                     <a href="/login"
-                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">LOGIN</a>
+                        class="{{ auth()->user() ? 'hidden' : 'block' }} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">MASUK</a>
                 </li>
                 <li>
                     <a href="/register"
-                        class="{{auth()->user() ? "hidden" : "block"}} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">REGISTER</a>
+                        class="{{ auth()->user() ? 'hidden' : 'block' }} py-2 pl-3 pr-4 text-white bg-black border-2 hover:text-black border-black rounded  hover:bg-transparent transition-all   ">DAFTAR</a>
                 </li>
             </ul>
         </div>

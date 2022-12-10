@@ -80,7 +80,7 @@ class EventController extends Controller
     {
         return view('event', [
             'event' => $event,
-            'title' => 'EVENT | ' . $event->title,
+            'title' => 'Eventify | ' . $event->nama,
         ]);
     }
 

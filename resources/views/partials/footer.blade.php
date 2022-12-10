@@ -3,6 +3,7 @@
         <div class="flex flex-col order-last lg:order-first justify-between gap-4">
             <img src="./img/logo_white.png" alt="">
             <p class="text-white/50">Ayo buat event mu disini !</p>
+            <p class="text-white/50">Made with <span style="color: #e25555;">❤</span> by Kelompok 3 MPTI-B</p>
             <div class="flex flex-row justify-between gap-4">
                 <a href="">
 

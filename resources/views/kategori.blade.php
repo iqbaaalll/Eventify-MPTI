@@ -18,6 +18,8 @@
         }
     </style>
     <title>Eventify</title>
+    <link rel = "icon" href="./img/logo_title2.png"
+        type = "image/x-icon">
 </head>
 
 <body>
@@ -25,10 +27,7 @@
 
     <section id="katogori-event">
         <div class="w-full h-full px-4 py-24 lg:py-40 lg:px-32 flex flex-col gap-16 lg:gap-32">
-            <div class="relative w-fit">
-                <h1 class="text-3xl font-extrabold z-10 relative">KATEGORI EVENT</h1>
-                <span class="absolute top-3 -right-5"><img src="./img/vector_header.png" alt=""></span>
-            </div>
+
             <div class="w-full h-full flex lg:flex-row flex-col justify-between gap-4">
                 <div class=" bg-white border border-transparent hover:shadow-lg transition-all rounded-lg  ">
                     <a href="#">

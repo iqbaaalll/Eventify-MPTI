@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
-    <title>REGISTER</title>
+    <title>Eventify</title>
+    <link rel = "icon" href="./img/logo_title2.png"
+        type = "image/x-icon">
     <style>
         * {
             font-family: 'Poppins', sans-serif;

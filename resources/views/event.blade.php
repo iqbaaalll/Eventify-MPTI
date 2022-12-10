@@ -17,7 +17,10 @@
             font-family: 'Poppins', sans-serif;
         }
     </style>
-    <title>{{ $title }}</title>
+    <link rel = "icon" href="./img/logo_title2.png"
+    type = "image/x-icon">
+    <title>{{ $title }} </title>
+
 </head>
 
 <body>
@@ -26,8 +29,8 @@
     <section id="hero">
         <div class="w-full h-full lg:h-screen p-2 pt-32 lg:pt-44 md:p-8 lg:p-32">
 
-            <div class="w-full h-full">
-                <img class="w-full h-full" src="/img/events/{{ $event->imagePath }}" alt="">
+            <div class="w-screen h-screen">
+                <img class="w-9/12 h-9/12" src="/img/events/{{ $event->imagePath }}" alt="">
             </div>
 
         </div>
