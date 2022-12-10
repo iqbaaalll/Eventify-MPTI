@@ -99,7 +99,7 @@
             </div>
             <div class="flex flex-col lg:flex-row justify-between w-150 h-150 gap-8">
 
-                @for ($event = 0; $event < 2; $event++)
+                @for ($event = 1; $event < 3; $event++)
                     <div class=" bg-white border border-transparent hover:border-gray-300 transition-all rounded-lg  ">
                         <a href="/event/{{ $events[$event]->id }}">
                             <img class="rounded-t-lg w-full" src="./img/events/{{ $events[$event]->imagePath }}"

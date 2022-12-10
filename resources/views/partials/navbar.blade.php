@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <a href="/jenisEvent"
-                        class="block py-2 pl-3 pr-4 hover:bg-black hover:text-white transition-all rounded ">BUAT
+                        class="{{ auth()->user() ? 'block' : 'hidden' }} block py-2 pl-3 pr-4 hover:bg-black hover:text-white transition-all rounded ">BUAT
                         EVENT</a>
                 </li>
                 <li>
